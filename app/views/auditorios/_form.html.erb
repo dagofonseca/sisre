@@ -1,0 +1,27 @@
+<%= form_for(auditorio) do |f| %>
+  <% if auditorio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(auditorio.errors.count, "error") %> prohibited this auditorio from being saved:</h2>
+
+      <ul>
+      <% auditorio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :amplificacion %>
+    <%= f.check_box :amplificacion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :proyector %>
+    <%= f.check_box :proyector %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

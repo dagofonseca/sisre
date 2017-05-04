@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bienestars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Correo</th>
+      <th>Contrasena</th>
+      <th>Identificador</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bienestars.each do |bienestar| %>
+      <tr>
+        <td><%= bienestar.correo %></td>
+        <td><%= bienestar.contrasena %></td>
+        <td><%= bienestar.identificador %></td>
+        <td><%= link_to 'Show', bienestar %></td>
+        <td><%= link_to 'Edit', edit_bienestar_path(bienestar) %></td>
+        <td><%= link_to 'Destroy', bienestar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bienestar', new_bienestar_path %>

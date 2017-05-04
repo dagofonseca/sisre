@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identificador:</strong>
+  <%= @lugar.identificador %>
+</p>
+
+<p>
+  <strong>Capacidad:</strong>
+  <%= @lugar.capacidad %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @lugar.estado %>
+</p>
+
+<%= link_to 'Edit', edit_lugar_path(@lugar) %> |
+<%= link_to 'Back', lugars_path %>

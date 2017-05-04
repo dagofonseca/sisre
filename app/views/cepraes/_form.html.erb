@@ -1,0 +1,32 @@
+<%= form_for(ceprae) do |f| %>
+  <% if ceprae.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ceprae.errors.count, "error") %> prohibited this ceprae from being saved:</h2>
+
+      <ul>
+      <% ceprae.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :correo %>
+    <%= f.text_field :correo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contrasena %>
+    <%= f.text_field :contrasena %>
+  </div>
+
+  <div class="field">
+    <%= f.label :identificador %>
+    <%= f.text_field :identificador %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

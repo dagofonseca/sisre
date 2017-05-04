@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @ceprae.correo %>
+</p>
+
+<p>
+  <strong>Contrasena:</strong>
+  <%= @ceprae.contrasena %>
+</p>
+
+<p>
+  <strong>Identificador:</strong>
+  <%= @ceprae.identificador %>
+</p>
+
+<%= link_to 'Edit', edit_ceprae_path(@ceprae) %> |
+<%= link_to 'Back', cepraes_path %>

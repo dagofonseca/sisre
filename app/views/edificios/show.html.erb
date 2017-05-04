@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Monbre:</strong>
+  <%= @edificio.monbre %>
+</p>
+
+<p>
+  <strong>Identificador:</strong>
+  <%= @edificio.identificador %>
+</p>
+
+<%= link_to 'Edit', edit_edificio_path(@edificio) %> |
+<%= link_to 'Back', edificios_path %>

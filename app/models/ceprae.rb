@@ -1,0 +1,2 @@
+class Ceprae < ApplicationRecord
+end

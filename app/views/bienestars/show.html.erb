@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @bienestar.correo %>
+</p>
+
+<p>
+  <strong>Contrasena:</strong>
+  <%= @bienestar.contrasena %>
+</p>
+
+<p>
+  <strong>Identificador:</strong>
+  <%= @bienestar.identificador %>
+</p>
+
+<%= link_to 'Edit', edit_bienestar_path(@bienestar) %> |
+<%= link_to 'Back', bienestars_path %>

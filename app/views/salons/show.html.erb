@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Computadores:</strong>
+  <%= @salon.computadores %>
+</p>
+
+<p>
+  <strong>Proyecto:</strong>
+  <%= @salon.proyecto %>
+</p>
+
+<%= link_to 'Edit', edit_salon_path(@salon) %> |
+<%= link_to 'Back', salons_path %>

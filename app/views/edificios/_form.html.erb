@@ -1,0 +1,27 @@
+<%= form_for(edificio) do |f| %>
+  <% if edificio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(edificio.errors.count, "error") %> prohibited this edificio from being saved:</h2>
+
+      <ul>
+      <% edificio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :monbre %>
+    <%= f.text_field :monbre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :identificador %>
+    <%= f.number_field :identificador %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
