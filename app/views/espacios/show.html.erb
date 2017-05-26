@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @espacio.numero %>
+</p>
+
+<p>
+  <strong>Capacidad:</strong>
+  <%= @espacio.capacidad %>
+</p>
+
+<p>
+  <strong>Disponibilidad:</strong>
+  <%= @espacio.disponibilidad %>
+</p>
+
+<%= link_to 'Edit', edit_espacio_path(@espacio) %> |
+<%= link_to 'Back', espacios_path %>

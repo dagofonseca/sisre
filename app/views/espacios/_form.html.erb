@@ -1,0 +1,32 @@
+<%= form_for(espacio) do |f| %>
+  <% if espacio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(espacio.errors.count, "error") %> prohibited this espacio from being saved:</h2>
+
+      <ul>
+      <% espacio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero %>
+    <%= f.number_field :numero %>
+  </div>
+
+  <div class="field">
+    <%= f.label :capacidad %>
+    <%= f.number_field :capacidad %>
+  </div>
+
+  <div class="field">
+    <%= f.label :disponibilidad %>
+    <%= f.check_box :disponibilidad %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

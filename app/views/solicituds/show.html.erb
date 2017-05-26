@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombredelevento:</strong>
+  <%= @solicitud.nombredelevento %>
+</p>
+
+<p>
+  <strong>Numerodeasistentes:</strong>
+  <%= @solicitud.numeroDeAsistentes %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @solicitud.descripcion %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @solicitud.estado %>
+</p>
+
+<p>
+  <strong>Computadores:</strong>
+  <%= @solicitud.computadores %>
+</p>
+
+<p>
+  <strong>Videobeam:</strong>
+  <%= @solicitud.videoBeam %>
+</p>
+
+<p>
+  <strong>Comentarios:</strong>
+  <%= @solicitud.comentarios %>
+</p>
+
+<p>
+  <strong>Expedicion:</strong>
+  <%= @solicitud.expedicion %>
+</p>
+
+<%= link_to 'Edit', edit_solicitud_path(@solicitud) %> |
+<%= link_to 'Back', solicituds_path %>

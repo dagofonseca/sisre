@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  monbre: MyString
+  nombre: MyString
   identificador: 1
+  numeroDeBa«Òos: 1
 
 two:
-  monbre: MyString
+  nombre: MyString
   identificador: 1
+  numeroDeBa«Òos: 1

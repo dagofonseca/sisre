@@ -6,9 +6,9 @@
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Rol</th>
-      <th>Email</th>
-      <th>Contrasena</th>
+      <th>Usuario sia</th>
+      <th>Clave</th>
+      <th>Vinculacion</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +17,9 @@
     <% @usuarios.each do |usuario| %>
       <tr>
         <td><%= usuario.nombre %></td>
-        <td><%= usuario.rol %></td>
-        <td><%= usuario.email %></td>
-        <td><%= usuario.contrasena %></td>
+        <td><%= usuario.usuario_sia %></td>
+        <td><%= usuario.clave %></td>
+        <td><%= usuario.vinculacion %></td>
         <td><%= link_to 'Show', usuario %></td>
         <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
         <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>

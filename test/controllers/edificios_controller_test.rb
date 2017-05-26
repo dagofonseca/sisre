@@ -17,7 +17,7 @@ class EdificiosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create edificio" do
     assert_difference('Edificio.count') do
-      post edificios_url, params: { edificio: { identificador: @edificio.identificador, monbre: @edificio.monbre } }
+      post edificios_url, params: { edificio: { identificador: @edificio.identificador, nombre: @edificio.nombre, numeroDeBaÇños: @edificio.numeroDeBaÇños } }
     end
 
     assert_redirected_to edificio_url(Edificio.last)
@@ -34,7 +34,7 @@ class EdificiosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update edificio" do
-    patch edificio_url(@edificio), params: { edificio: { identificador: @edificio.identificador, monbre: @edificio.monbre } }
+    patch edificio_url(@edificio), params: { edificio: { identificador: @edificio.identificador, nombre: @edificio.nombre, numeroDeBaÇños: @edificio.numeroDeBaÇños } }
     assert_redirected_to edificio_url(@edificio)
   end
 
