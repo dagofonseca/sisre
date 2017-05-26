@@ -1,2 +1,0 @@
-class Reserva < ApplicationRecord
-end

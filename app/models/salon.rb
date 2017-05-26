@@ -1,2 +1,0 @@
-class Salon < ApplicationRecord
-end

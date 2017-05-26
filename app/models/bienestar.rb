@@ -1,2 +1,0 @@
-class Bienestar < ApplicationRecord
-end

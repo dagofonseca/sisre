@@ -1,2 +1,0 @@
-class Sala < ApplicationRecord
-end
