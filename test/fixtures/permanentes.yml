@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numeroDeVecesEvento: 1
+  fechaInicio: 2017-05-29
+  fechaFin: 2017-05-29
+
+two:
+  numeroDeVecesEvento: 1
+  fechaInicio: 2017-05-29
+  fechaFin: 2017-05-29

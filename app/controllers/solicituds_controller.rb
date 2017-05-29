@@ -4,7 +4,7 @@ class SolicitudsController < ApplicationController
   # GET /solicituds
   # GET /solicituds.json
   def index
-    @solicituds = Solicitud.all
+    @solicituds = Solicitud.where(:user_id => current_user.id).order("created_at DESC")
   end
 
   # GET /solicituds/1
@@ -14,7 +14,7 @@ class SolicitudsController < ApplicationController
 
   # GET /solicituds/new
   def new
-    @solicitud = Solicitud.new
+    @solicitud = current_user.solicituds.build
   end
 
   # GET /solicituds/1/edit
@@ -24,7 +24,7 @@ class SolicitudsController < ApplicationController
   # POST /solicituds
   # POST /solicituds.json
   def create
-    @solicitud = Solicitud.new(solicitud_params)
+    @solicitud = current_user.solicituds.build(solicitud_params)
 
     respond_to do |format|
       if @solicitud.save

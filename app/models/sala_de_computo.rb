@@ -1,0 +1,2 @@
+class SalaDeComputo < ApplicationRecord
+end

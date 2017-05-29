@@ -1,0 +1,2 @@
+module PuntualsHelper
+end

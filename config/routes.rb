@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :sala_de_conferencia
+  resources :auditorios
+  resources :sala_de_computos
+  resources :salons
+  resources :permanentes
+  resources :puntuals
+  devise_for :users
   resources :administradors
   resources :solicituds
   resources :espacios

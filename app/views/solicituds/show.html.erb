@@ -39,6 +39,10 @@
   <strong>Expedicion:</strong>
   <%= @solicitud.expedicion %>
 </p>
+<p>
+  <strong>usuarioid:</strong>
+  <%= @solicitud.user_id %>
+</p>
 
 <%= link_to 'Edit', edit_solicitud_path(@solicitud) %> |
 <%= link_to 'Back', solicituds_path %>

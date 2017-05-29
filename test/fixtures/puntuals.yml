@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fechaYHoraInicio: 2017-05-29 13:02:00
+  fechaYHoraFin: 2017-05-29 13:02:00
+
+two:
+  fechaYHoraInicio: 2017-05-29 13:02:00
+  fechaYHoraFin: 2017-05-29 13:02:00

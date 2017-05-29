@@ -1,0 +1,2 @@
+class Puntual < ApplicationRecord
+end

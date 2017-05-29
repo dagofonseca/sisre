@@ -9,6 +9,18 @@ rails generate scaffold Solicitud nombredelevento:string numeroDeAsistentes:inte
 
 rails generate scaffold Administrador nombre:string correo:string clave:string
 
+rails generate scaffold Puntual fechaYHoraInicio:datetime fechaYHoraFin:datetime
+
+rails generate scaffold Permanente numeroDeVecesEvento:integer fechaInicio:date fechaFin:date
+
+rails generate scaffold Salon videoBeam:boolean televisor:boolean
+
+rails generate scaffold SalaDeComputo videoBeam:boolean tipoDePc:string
+
+rails generate scaffold Auditorio videoBeam:boolean atril:boolean
+
+rails generate scaffold SalaDeConferencia
+
 bundle install
 rails db:migrate
 

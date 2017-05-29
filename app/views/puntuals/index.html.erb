@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Puntuals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fechayhorainicio</th>
+      <th>Fechayhorafin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @puntuals.each do |puntual| %>
+      <tr>
+        <td><%= puntual.fechaYHoraInicio %></td>
+        <td><%= puntual.fechaYHoraFin %></td>
+        <td><%= link_to 'Show', puntual %></td>
+        <td><%= link_to 'Edit', edit_puntual_path(puntual) %></td>
+        <td><%= link_to 'Destroy', puntual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Puntual', new_puntual_path %>

@@ -1,0 +1,2 @@
+class Permanente < ApplicationRecord
+end

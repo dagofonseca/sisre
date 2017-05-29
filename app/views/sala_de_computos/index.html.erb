@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sala De Computos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Videobeam</th>
+      <th>Tipodepc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sala_de_computos.each do |sala_de_computo| %>
+      <tr>
+        <td><%= sala_de_computo.videoBeam %></td>
+        <td><%= sala_de_computo.tipoDePc %></td>
+        <td><%= link_to 'Show', sala_de_computo %></td>
+        <td><%= link_to 'Edit', edit_sala_de_computo_path(sala_de_computo) %></td>
+        <td><%= link_to 'Destroy', sala_de_computo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sala De Computo', new_sala_de_computo_path %>

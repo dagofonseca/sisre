@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sala De Conferencia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sala_de_conferencia.each do |sala_de_conferencium| %>
+      <tr>
+        <td><%= link_to 'Show', sala_de_conferencium %></td>
+        <td><%= link_to 'Edit', edit_sala_de_conferencium_path(sala_de_conferencium) %></td>
+        <td><%= link_to 'Destroy', sala_de_conferencium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sala De Conferencium', new_sala_de_conferencium_path %>

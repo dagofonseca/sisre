@@ -1,3 +1,4 @@
+
 <%= form_for(solicitud) do |f| %>
   <% if solicitud.errors.any? %>
     <div id="error_explanation">
@@ -10,26 +11,28 @@
       </ul>
     </div>
   <% end %>
-
+<div class="form-horizontal">
+  
+  
   <div class="field">
-    <%= f.label :nombredelevento %>
+    <%= f.label :nombredelevento ,class: "control-label col-sm-2"%>
     <%= f.text_field :nombredelevento %>
   </div>
-
+  
   <div class="field">
-    <%= f.label :numeroDeAsistentes %>
-    <%= f.number_field :numeroDeAsistentes %>
+    <%= f.label :numeroDeAsistentes ,class: "control-label col-sm-2"%>
+    <%= f.select :numeroDeAsistentes, options_for_select(%w[33 36 40 60]) %>
   </div>
 
   <div class="field">
-    <%= f.label :descripcion %>
+    <%= f.label :descripcion , class: "control-label col-sm-2" %>
     <%= f.text_area :descripcion %>
   </div>
-
+  <!--
   <div class="field">
-    <%= f.label :estado %>
+    <%= f.label :estado ,class: "control-label col-sm-2"%>
     <%= f.text_field :estado %>
-  </div>
+  </div>-->
 
   <div class="field">
     <%= f.label :computadores %>
@@ -42,16 +45,19 @@
   </div>
 
   <div class="field">
-    <%= f.label :comentarios %>
+    <%= f.label :comentarios ,class: "control-label col-sm-2"%>
     <%= f.text_area :comentarios %>
   </div>
 
   <div class="field">
-    <%= f.label :expedicion %>
+    <%= f.label :expedicion,class: "control-label col-sm-2" %>
     <%= f.date_select :expedicion %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
+  
+</div>
 <% end %>
+</div>

@@ -1,41 +1,37 @@
+
 <p id="notice"><%= notice %></p>
 
-<h1>Solicituds</h1>
+<h2>Solicituds</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nombredelevento</th>
-      <th>Numerodeasistentes</th>
-      <th>Descripcion</th>
-      <th>Estado</th>
-      <th>Computadores</th>
-      <th>Videobeam</th>
-      <th>Comentarios</th>
-      <th>Expedicion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<%if user_signed_in? %>
+    <div class ="row btn-right">
+         <%= link_to 'New Solicitud', new_solicitud_path ,class:"btn btn-primary", :style=>"color:white;float:right;" %>
+        </div>
     <% @solicituds.each do |solicitud| %>
-      <tr>
-        <td><%= solicitud.nombredelevento %></td>
-        <td><%= solicitud.numeroDeAsistentes %></td>
-        <td><%= solicitud.descripcion %></td>
-        <td><%= solicitud.estado %></td>
-        <td><%= solicitud.computadores %></td>
-        <td><%= solicitud.videoBeam %></td>
-        <td><%= solicitud.comentarios %></td>
-        <td><%= solicitud.expedicion %></td>
-        <td><%= link_to 'Show', solicitud %></td>
-        <td><%= link_to 'Edit', edit_solicitud_path(solicitud) %></td>
-        <td><%= link_to 'Destroy', solicitud, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
 
-<%= link_to 'New Solicitud', new_solicitud_path %>
+      <div class = "row item">
+
+				<div class = "col-md-8">
+       
+
+            <h2 style="opacity: 0.5;" class = "item-title">  <%= link_to solicitud.nombredelevento , solicitud %></h2>
+            <p style="opacity: 0.5;" class = "item-desc item-sub-title"><%= solicitud.descripcion %></p>
+            <p style="opacity: 0.5;" class = "time-ago item-sub-title">Asistentes <%= solicitud.numeroDeAsistentes %></p>
+            <p style="opacity: 0.5;" class = "time-ago item-sub-title">Created <%= time_ago_in_words(solicitud.created_at) %></p>
+        		</div>
+        	<div class ="col-md-2">
+					<p><%= link_to  solicitud, method: :delete, data: {confirm: "Are you sure?" } do %></p>
+					<i class = "fa fa-lg fa-trash"></i>
+					<% end %>
+				</div>
+			   
+        
+
+       </div>
+     
+<br><% end -%>
+
+
+   
+<% end -%>

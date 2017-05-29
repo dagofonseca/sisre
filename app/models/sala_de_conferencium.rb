@@ -1,0 +1,2 @@
+class SalaDeConferencium < ApplicationRecord
+end

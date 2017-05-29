@@ -4,11 +4,63 @@
     <title>Sisre</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'default', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.fontawesome.com/8212e87c26.js"></script>
+    <link rel="stylesheet" href="/assets/style.css">
   </head>
 
   <body>
-    <%= yield %>
+  	<header>
+		<div class="container">
+			<div class="col-xs-2">
+			</div>
+			<div class="navigation row">
+			<div class="col-xs-12 col-sm-3 col-md-2">
+					<img src="/assets/logo.png" width="150px">
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-8">
+				<ul >
+					<li> Bienestar  </li>
+					<li> UNAL </li>
+					<li><%= link_to "Sign Up", new_user_registration_path, :style=>"color:white;" %></li>
+       			<% if (current_user.present?) %>
+       			<li>	<%= link_to "Sign Out", destroy_user_session_path, method: :delete, :style=>"color:white;" %> </li>
+       			<% else %>
+
+       			<li>	<%= link_to "Log In", new_user_session_path, :style=>"color:white;" %></li>
+       			<% end %>
+				</ul>
+			</div>
+		</div>
+    </div>
+	</br>
+	</br>
+	</header>
+  	
+
+        
+       <div class="container" ><%= yield %></div>
+    
+    <div >
+	<footer>
+		<div class="container">
+				  <div class = "final-page ">
+				    <div class = "final-page-header">
+				      <img src="/assets/unLogo.png" / width="200px">
+				    </div>
+
+				    <div class = "final-page-body">
+				      <p> <b> S.I.S.R.E.</b> <br/>
+				         Univeridad Nacional de Colombia <br />
+				         Facultad de Ingenieria <br />
+				         Ingenieria de Sistemas y Computacion <br />
+				         Ingenieria de Software I  <br />
+				       </p>
+				    </div>
+				  </div>
+		</div>
+	</footer>
+</div>
   </body>
 </html>

@@ -1,0 +1,17 @@
+<%= simple_form_for(@permanente) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.input :numeroDeVecesEvento %>
+
+    <%= f.input :fechaInicio %>
+
+    <%= f.input :fechaFin %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

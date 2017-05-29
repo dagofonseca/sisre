@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numerodevecesevento:</strong>
+  <%= @permanente.numeroDeVecesEvento %>
+</p>
+
+<p>
+  <strong>Fechainicio:</strong>
+  <%= @permanente.fechaInicio %>
+</p>
+
+<p>
+  <strong>Fechafin:</strong>
+  <%= @permanente.fechaFin %>
+</p>
+
+<%= link_to 'Edit', edit_permanente_path(@permanente) %> |
+<%= link_to 'Back', permanentes_path %>
